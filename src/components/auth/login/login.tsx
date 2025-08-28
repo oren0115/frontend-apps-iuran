@@ -23,7 +23,7 @@ export default function Login() {
   };
 
   return (
-    <div className="max-w-sm mx-auto p-6 rounded-xl shadow-lg bg-white">
+    <div className="max-w-sm mx-auto p-6 h-auto rounded-xl shadow-lg bg-white">
       <div className="flex flex-col gap-2 mb-4 text-center">
         <h1 className="text-2xl font-bold">Login Your Account</h1>
         <p className="text-gray-600 text-sm">
@@ -69,6 +69,13 @@ export default function Login() {
         <Button type="submit" className="mt-2">
           Login
         </Button>
+        <div className="flex justify-between mt-4">
+          <a
+            href="/auth/reset-password"
+            className="text-sm text-blue-600 hover:underline">
+            Forgot Password?
+          </a>
+        </div>
       </form>
     </div>
   );

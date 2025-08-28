@@ -1,5 +1,11 @@
-import { FaHome } from "react-icons/fa";
-import { MdOutlinePayment, MdLogin, MdLogout, MdHistory } from "react-icons/md";
+import {
+  // MdPayment,
+  MdLogin,
+  MdLogout,
+  MdHistory,
+  MdNotificationsNone,
+  MdOutlineHome,
+} from "react-icons/md";
 import { useState } from "react";
 import { Link } from "react-router-dom"; // Karena pakai Vite (bukan Next.js)
 
@@ -13,19 +19,19 @@ export default function Footer() {
           <Link
             to="/"
             className="flex flex-col items-center text-gray-700 hover:text-gray-900">
-            <FaHome className="text-3xl" />
+            <MdOutlineHome className="text-3xl" />
             {/* <span className="text-xs">Home</span> */}
           </Link>
         </li>
 
-        <li>
+        {/* <li>
           <Link
             to="/payment"
             className="flex flex-col items-center text-gray-700 hover:text-gray-900">
-            <MdOutlinePayment className="text-3xl" />
-            {/* <span className="text-xs">Payment</span> */}
+            <MdPayment className="text-3xl" />
+            <span className="text-xs">Payment</span>
           </Link>
-        </li>
+        </li> */}
 
         <li>
           <Link
@@ -33,6 +39,15 @@ export default function Footer() {
             className="flex flex-col items-center text-gray-700 hover:text-gray-900">
             <MdHistory className="text-3xl" />
             {/* <span className="text-xs">History</span> */}
+          </Link>
+        </li>
+
+        <li>
+          <Link
+            to="/notification"
+            className="flex flex-col items-center text-gray-700 hover:text-gray-900">
+            <MdNotificationsNone className="text-3xl" />
+            {/* <span className="text-xs">Notifications</span> */}
           </Link>
         </li>
 

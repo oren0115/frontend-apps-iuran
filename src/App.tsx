@@ -9,13 +9,21 @@ import AdminDashboard from "@/pages/admin/dashboard/dashboard.page";
 import UserLayout from "./layouts/user.layout";
 import HomePage from "./pages/client/home/home.page";
 import HistoryPage from "./pages/client/history/history";
+import { PaymentPage } from "./pages/client/payment/payment.page";
+import ResetPassword from "@/components/auth/reset.password/reset.password";
+
+// auth
+import AuthLayout from "./layouts/auth.layouts";
+import NotificationPage from "./pages/client/notifications/notification.page";
+
+// common
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         {/* Auth Pages */}
-        <Route path="/auth">
+        <Route path="/auth" element={<AuthLayout />}>
           <Route
             path="register"
             element={
@@ -32,6 +40,14 @@ function App() {
               </div>
             }
           />
+          <Route
+            path="reset-password"
+            element={
+              <div className="min-h-screen w-screen flex items-center justify-center bg-gray-50">
+                <ResetPassword />
+              </div>
+            }
+          />
         </Route>
 
         {/* Admin Pages */}
@@ -42,8 +58,9 @@ function App() {
         {/* User Pages */}
         <Route path="/" element={<UserLayout />}>
           <Route index element={<HomePage />} />
-          <Route path="history" element={<HistoryPage />} />{" "}
-          {/* 🔥 Tanpa '/' */}
+          <Route path="history" element={<HistoryPage />} />
+          <Route path="payment" element={<PaymentPage />} />
+          <Route path="notification" element={<NotificationPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

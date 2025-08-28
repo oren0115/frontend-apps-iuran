@@ -25,7 +25,7 @@ export default function Register() {
   };
 
   return (
-    <div className="max-w-sm mx-auto p-6 rounded-xl shadow-lg bg-white">
+    <div className="max-w-sm mx-auto p-6 h-auto rounded-xl shadow-lg bg-white">
       <div className="flex flex-col gap-2 mb-4 text-center">
         <h1 className="text-2xl font-bold">Create Your Account</h1>
         <p className="text-gray-600 text-sm">
