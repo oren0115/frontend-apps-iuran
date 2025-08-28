@@ -1,8 +1,8 @@
+import { HistoryPayment } from "@/components/client/history/history.component";
 function HistoryPage() {
   return (
     <div className="p-4 mt-16">
-      <h1>History</h1>
-      {/* Add your history content here */}
+      <HistoryPayment />
     </div>
   );
 }
